@@ -1,0 +1,315 @@
+/* Container */
+.beatlist-container{
+    background-color: #E8D6C0; /* Slightly darker background */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    /* min-width: 100%; */
+    max-width: 1200px;
+    margin: auto;
+    
+    overflow-x:auto;
+
+}
+.beatlist-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.beatlist-container::-webkit-scrollbar-thumb {
+    background-color: #999999;
+    border-radius: 10px;
+}
+.beatlist-container-mobi {
+    background-color: #E8D6C0; 
+    color: white;
+    border-radius: 10px;
+    min-width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+.beatsmain-conatainer{
+    background-color:#F5E6D3;
+    width: 100%;
+    padding: 20px;
+    
+}
+/* Header Row */
+.beatlist-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr 1fr 1fr 2fr;
+    background-color: #333;
+    padding: 10px;
+    border-bottom: 2px solid #555;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Each Row */
+.beatlist-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr 1fr 1fr 2fr;
+    /* grid-template-columns: minmax(100px, 1fr) minmax(150px, 2fr) minmax(200px, 3fr) minmax(50px, 1fr) minmax(50px, 1fr) minmax(100px, 2fr); */
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    transition: background-color 0.3s ease;
+}
+.active-beat-container {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 40px;
+    width:50%;
+    margin:auto;
+}
+
+.active-beat-details h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #4A3728;
+}
+
+/* Play Button */
+.play-btn {
+    background: none;
+    border: 2px solid #00A4E4;
+    border-radius: 50%;
+    color: #00A4E4;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.play-btn:hover {
+    background-color: #00A4E4;
+    color: #1a1a1a;
+}
+
+/* Track Name */
+.beat-track {
+    padding-left: 10px;
+    color:#4A3728;
+}
+
+/* Waveform Placeholder */
+.waveform-placeholder {
+    background-color: #555;
+    /* height: 40px; */
+    width: 100%;
+    padding:4px;
+    border-radius: 5px;
+}
+
+/* Key and BPM */
+.beat-key, .beat-bpm {
+    text-align: center;
+    color:#4A3728;
+}
+
+/* Actions */
+.action-btn {
+    background: none;
+    border: 2px solid #00A4E4;
+    color: #00A4E4;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.action-btn:hover {
+    background-color: #00A4E4;
+    color: #1a1a1a;
+}
+
+/* modal for sharing */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px 50px;
+
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .share-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .url-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.url-container p {
+    margin: 0;
+    padding-right: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 300px;
+    font-size: 14px;
+    color: #4A4A4A;
+}
+  
+  .modal-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .copy-btn {
+    background-color: #00A4E4;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 8px 12px;
+    color: white;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    margin:10px;
+  }
+  
+  .copy-btn img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .close-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #00A4E4;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .copy-success-message {
+    color: green;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.beat-logo{
+    margin: 10px;
+    font-size: 16px;
+    font-family: 'Lufga Bold', sans-serif;
+    color: #4A3728;}
+.mobi{
+    display:none;
+
+}
+.beatlist-container-mobi{
+    display:none;
+}
+/* Responsive Layout */
+@media (max-width: 768px) {
+    /* .beatlist-header,
+    .beatlist-row {
+        grid-template-columns: 1fr 3fr 1fr;
+        font-size: 14px; 
+    }
+
+    .beatlist-container-mobi {
+        padding: 10px;
+    } */
+
+    /* .beatlist-header div:nth-child(3), 
+    .beatlist-header div:nth-child(4),
+    .beatlist-header div:nth-child(5) {
+        display: none; 
+    }
+
+    .beatlist-row div:nth-child(3), 
+    .beatlist-row div:nth-child(4),
+    .beatlist-row div:nth-child(5) {
+        display: none; 
+    } */
+    /* .beatlist-header, .beatlist-row {
+        grid-template-columns: 1fr 2fr 1fr 1fr;
+    } */
+    .mobi{
+        display:block;
+    }
+    /* .beat-waveform {
+        display: none;
+    } */
+
+    .action-btn {
+        margin-left: 5px;
+        padding: 5px;
+    }
+    /* .beat-key,.beat-bpm{
+        display:none;
+    } */
+    /* .beatlist-container{
+        display:none;
+    } */
+    .beatlist-container-mobi{
+        display:block;
+    }
+    .active-beat-container{
+        flex-direction:column;
+        width:90% !important;
+        padding:13px 10px !important;
+    }
+    .beatlist-container{
+        width: 900px;
+        overflow-x:scroll;
+    }
+    .active-beat-container{
+        padding:0px;
+    }
+    .active-beat-details{
+        width:90%;
+    }
+    .rhap_container {
+        width:100% !important;
+    }
+    .rhap_main{
+        flex-direction:column !important;
+        width:90% !important;
+    }
+    .beatlist-outer-container{
+        width:100%;
+        overflow-x:scroll;
+        padding:10px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    /* .beatlist-header, .beatlist-row {
+        
+        grid-template-columns: minmax(50px, 1fr) minmax(100px, 2fr) minmax(50px, 1fr) minmax(50px, 1fr);
+    } */
+
+    .action-btn {
+        padding: 4px;
+    }
+
+    .play-btn {
+        padding: 8px;
+    }
+}
+
+
+
