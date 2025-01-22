@@ -94,6 +94,7 @@ const PremiumBeats = () => {
 
     useEffect(() => {
         try{
+             // eslint-disable-next-line no-unused-vars
         const bpmPromises = PremiumBeats.map((beat, idx) => {
             createWaveSurfer(idx, beat.audioUrl);
             return calculateBPM(beat.audioUrl).then(bpm => {

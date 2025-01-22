@@ -65,7 +65,7 @@ const FreeBeat = () => {
         const bufferLength = 2048;
         const buffer = new Float32Array(bufferLength);
         const input = audioBuffer.getChannelData(0);
-        const sampleRate = audioBuffer.sampleRate;
+        // const sampleRate = audioBuffer.sampleRate;
 
         let beats = 0;
         let lastEnergy = 0;
@@ -94,6 +94,7 @@ const FreeBeat = () => {
 
     useEffect(() => {
         try{
+              // eslint-disable-next-line no-unused-vars
         const bpmPromises = freeBeats.map((beat, idx) => {
             createWaveSurfer(idx, beat.audioUrl);
             return calculateBPM(beat.audioUrl).then(bpm => {
